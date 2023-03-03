@@ -13,7 +13,9 @@
             </p>
             <h6 class="card-subtitle">{{ post.post_date }}</h6>
             <p class="card-text">{{ post.content.substr(0,250)}}...</p>
-            <a href="#" class="btn btn-primary">Read More...</a>
+            <router-link :to="{ name: 'post', params: { id: post.id } }"
+                class="btn btn-primary mt-5">Read More...
+            </router-link>
         </div>
     </article>
 </template>

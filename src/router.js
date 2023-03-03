@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import AboutUs from './pages/AboutUs.vue';
 import PostsList from './pages/PostsList.vue';
+import SinglePost from './pages/SinglePost.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -21,6 +22,11 @@ const router = createRouter({
             path: '/posts',
             name: 'posts',
             component: PostsList
+        },
+        {
+            path: '/posts/:id',
+            name: 'post',
+            component: SinglePost
         },
     ]
 });
