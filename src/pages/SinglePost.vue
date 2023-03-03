@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <AppPost :post="post" />
+        <AppPost :post="post" :isShow="true"/>
     </div>
 </template>
 <script>

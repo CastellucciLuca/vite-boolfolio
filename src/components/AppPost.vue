@@ -12,8 +12,8 @@
                 </span>
             </p>
             <h6 class="card-subtitle">{{ post.post_date }}</h6>
-            <p class="card-text">{{ post.content.substr(0,250)}}...</p>
-            <router-link :to="{ name: 'post', params: { id: post.id } }"
+            <p class="card-text">{{ (isShow) ? post.content : post.content.substr(0, 250) }}...</p>
+            <router-link v-if="!isShow" :to="{ name: 'post', params: { id: post.id } }"
                 class="btn btn-primary mt-5">Read More...
             </router-link>
         </div>
@@ -34,6 +34,11 @@ export default {
                 type: Object,
                 required: true,
             },
+            'isShow': {
+                type: Boolean,
+                required: false,
+                default: false,
+            }
     }
 }
 </script>
