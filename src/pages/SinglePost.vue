@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="container">
         <AppPost :post="post" :isShow="true"/>
     </div>
 </template>
